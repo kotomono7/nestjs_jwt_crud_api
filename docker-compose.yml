@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  db-development:
+    image: postgres:13
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nestjs
+    networks:
+      - kotomono
+  db-testing:
+    image: postgres:13
+    ports:
+      - 5435:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nestjs
+    networks:
+      - kotomono
+networks:
+  kotomono:
