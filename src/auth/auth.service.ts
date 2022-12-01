@@ -40,7 +40,7 @@ export class AuthService {
             }
 
             throw error;
-1       }
+        }
     }
 
     async signin(dto: AuthDto) {
